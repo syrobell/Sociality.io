@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-logo {
+    width: 250px;
+    height: 50px;
+    background-color: #31363b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.sidebar-accounts {
+    width: 66px;
+    height: 100%;
+    background-color: #2a2f33;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-accounts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-accounts img {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    opacity: 24%;
+}
+
+.sidebar-accounts .active img {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.accounts-item .selector {
+    margin-top: 20px;
+    width: 4px;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    background-color: #f55661;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 0%;
+}
+
+.active .selector {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.accounts-item .notification {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #3ac1a9;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 30px;
+}
+
+.sidebar-menu {
+    width: 184px;
+    height: 100%;
+    background-color: #393d42;
+    position: fixed;
+    top: 50px;
+    left: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.accordion{
+    width: 100%;
+}
+.accordion .contentBox{
+    position: relative;
+
+
+}
+.accordion .contentBox .title{
+   position:relative;
+   padding: 10px;
+    color: #fff;
+    cursor:pointer;
+    
+}
+.accordion .contentBox .title::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #262728;
+}
+.accordion .contentBox .content{
+    position: relative;
+    background-color: #32363A;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    display: border-box;
+
+}
+.accordion .contentBox.active .content{
+    height: 100%;
+    padding-top: 15px;
+    padding-left: 8px;
+    color: white;
+    cursor: pointer;     
+}
+.accordion .contentBox.active .title::before{
+    content: "-";
+}
+.accordion .contentBox.active .title{
+    background-color: #f55661;
+}
+.accordion .contentBox.active .title-notification{
+    background-color: #f55661;
+}
+.accordion .contentBox .content span{
+    width: 10px;
+    height: 10px;
+    background-color: #f55661;
+    position: absolute;
+    top: -5px;
+    rotate: 45deg;
+    left: 20px;
+}
+.accordion .contentBox .content li{
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+.accordion .contentBox .content .active{
+    color: #f55661;
+}
+.accordion .contentBox .title-notification{
+    position:relative;
+    padding: 10px;
+     color: #fff;
+     cursor:pointer;    
+ }
+ .accordion .contentBox .title-notification span{
+    width: 30px;
+    height: 20px;
+    border: 2px solid #3ac18281;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    right: 10px;
+    font-size: 15px;
+
+    
+ }
