@@ -101,8 +101,17 @@ body {
    padding: 10px;
     color: #fff;
     cursor:pointer;
+    font-size: 13px;
     
 }
+.accordion .contentBox .title i{
+    position:relative;
+    padding: 10px;
+     color: #f55661;
+     cursor:pointer;
+     font-size: 13px;
+     
+ }
 .accordion .contentBox .title::before{
     content: "+";
     position: absolute;
@@ -137,6 +146,12 @@ body {
 .accordion .contentBox.active .title-notification{
     background-color: #f55661;
 }
+.accordion .contentBox.active .title i{
+    color: white;
+}
+.accordion .contentBox.active .title-notification i{
+    color: white;
+}
 .accordion .contentBox .content span{
     width: 10px;
     height: 10px;
@@ -157,7 +172,13 @@ body {
     position:relative;
     padding: 10px;
      color: #fff;
-     cursor:pointer;    
+     cursor:pointer;
+     font-size: 13px;   
+ }
+ .accordion .contentBox .title-notification i{
+    position:relative;
+    padding: 10px;
+     color: #f55661;   
  }
  .accordion .contentBox .title-notification span{
     width: 30px;
