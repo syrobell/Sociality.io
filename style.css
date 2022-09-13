@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sidebar-logo {
@@ -88,31 +89,31 @@ body {
     align-items: flex-start;
 }
 
-.accordion{
+.accordion {
     width: 100%;
 }
-.accordion .contentBox{
+
+.accordion .contentBox {
     position: relative;
-
-
 }
-.accordion .contentBox .title{
-   position:relative;
-   padding: 10px;
-    color: #fff;
-    cursor:pointer;
-    font-size: 13px;
-    
-}
-.accordion .contentBox .title i{
-    position:relative;
+
+.accordion .contentBox .title {
+    position: relative;
     padding: 10px;
-     color: #f55661;
-     cursor:pointer;
-     font-size: 13px;
-     
- }
-.accordion .contentBox .title::before{
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.accordion .contentBox .title i {
+    position: relative;
+    padding: 10px;
+    color: #f55661;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.accordion .contentBox .title::before {
     content: "+";
     position: absolute;
     top: 50%;
@@ -121,38 +122,45 @@ body {
     font-size: 20px;
     color: #262728;
 }
-.accordion .contentBox .content{
+
+.accordion .contentBox .content {
     position: relative;
     background-color: #32363A;
     height: 0;
     overflow: hidden;
     overflow-y: auto;
     display: border-box;
-
 }
-.accordion .contentBox.active .content{
+
+.accordion .contentBox.active .content {
     height: 100%;
     padding-top: 15px;
     padding-left: 8px;
     color: white;
-    cursor: pointer;     
+    cursor: pointer;
 }
-.accordion .contentBox.active .title::before{
+
+.accordion .contentBox.active .title::before {
     content: "-";
 }
-.accordion .contentBox.active .title{
+
+.accordion .contentBox.active .title {
     background-color: #f55661;
 }
-.accordion .contentBox.active .title-notification{
+
+.accordion .contentBox.active .title-notification {
     background-color: #f55661;
 }
-.accordion .contentBox.active .title i{
+
+.accordion .contentBox.active .title i {
     color: white;
 }
-.accordion .contentBox.active .title-notification i{
+
+.accordion .contentBox.active .title-notification i {
     color: white;
 }
-.accordion .contentBox .content span{
+
+.accordion .contentBox .content span {
     width: 10px;
     height: 10px;
     background-color: #f55661;
@@ -161,26 +169,31 @@ body {
     rotate: 45deg;
     left: 20px;
 }
-.accordion .contentBox .content li{
+
+.accordion .contentBox .content li {
     margin-bottom: 10px;
     font-weight: 200;
 }
-.accordion .contentBox .content .active{
+
+.accordion .contentBox .content .active {
     color: #f55661;
 }
-.accordion .contentBox .title-notification{
-    position:relative;
+
+.accordion .contentBox .title-notification {
+    position: relative;
     padding: 10px;
-     color: #fff;
-     cursor:pointer;
-     font-size: 13px;   
- }
- .accordion .contentBox .title-notification i{
-    position:relative;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.accordion .contentBox .title-notification i {
+    position: relative;
     padding: 10px;
-     color: #f55661;   
- }
- .accordion .contentBox .title-notification span{
+    color: #f55661;
+}
+
+.accordion .contentBox .title-notification span {
     width: 30px;
     height: 20px;
     border: 2px solid #3ac18281;
@@ -192,6 +205,90 @@ body {
     top: 30%;
     right: 10px;
     font-size: 15px;
+}
 
-    
- }
+.main-div {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F7F8;
+    padding: 20px;
+    left: 250px;
+    position: fixed;
+}
+
+.status-color-div ul {
+    display: flex;
+    list-style: none;
+}
+
+.status-color-div ul li {
+    margin-right: 18px;
+}
+
+.published span {
+    background-color: #ACACAC;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.scheduled span {
+    background-color: #3AC183;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.needapproval span {
+    background-color: #f7bf38;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.error span {
+    background-color: #fb6450;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.notes span {
+    background-color: #67B1F2;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 0;
+    right: 350px;
+    padding: 40px;
+}
+
+.profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.date {
+    padding-top: 40px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #7a7a7a;
+}
